@@ -1,0 +1,12 @@
+#about {
+  width: 100vw;
+  height: 100vh;
+  background: $tan;
+  background-image: url("../img/about-background.png");
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  @media screen and (max-width: 900px) {
+    background-image: none;
+  }
+}

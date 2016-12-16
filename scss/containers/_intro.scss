@@ -2,6 +2,8 @@
   width: 100vw;
   height: 100vh;
   background: url("../img/intro.jpg");
+  background-position: center;
+  background-size: cover;
   color: white;
   position: relative;
   @media screen and (max-width: 900px) {
@@ -76,11 +78,9 @@
   }
 }
 
-
-
 .intro-content {
   position: absolute;
-  top: 23%;
+  top: 25%;
   width: 100vw;
   text-align: center;
   img {
@@ -183,6 +183,12 @@
   @media screen and (max-width: 900px) {
     display: none;
   }
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 50;
 }
 
 .search {

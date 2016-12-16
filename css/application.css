@@ -83,6 +83,8 @@ a {
   width: 100vw;
   height: 100vh;
   background: url("../img/intro.jpg");
+  background-position: center;
+  background-size: cover;
   color: white;
   position: relative; }
   @media screen and (max-width: 900px) {
@@ -155,7 +157,7 @@ a {
 
 .intro-content {
   position: absolute;
-  top: 23%;
+  top: 25%;
   width: 100vw;
   text-align: center; }
   .intro-content img {
@@ -246,6 +248,11 @@ a {
     #second-nav {
       display: none; } }
 
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 50; }
+
 .search {
   color: white;
   font-size: 1.2em; }
@@ -253,7 +260,7 @@ a {
 #gallery {
   display: flex;
   flex-wrap: wrap;
-  background-color: #D1D1C9; }
+  background-color: #FFF0E7; }
 
 .activity {
   position: relative;
@@ -324,5 +331,17 @@ a {
   background: url("../img/biking.jpg");
   background-position: center;
   background-size: cover; }
+
+#about {
+  width: 100vw;
+  height: 100vh;
+  background: #FFF0E7;
+  background-image: url("../img/about-background.png");
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat; }
+  @media screen and (max-width: 900px) {
+    #about {
+      background-image: none; } }
 
 /*# sourceMappingURL=application.css.map */
