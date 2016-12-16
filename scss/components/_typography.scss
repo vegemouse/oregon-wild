@@ -1,0 +1,30 @@
+$header-font: 'Lusitana', serif;
+$secondary-font: 'Oswald', sans-serif;
+$normal-font: 'Lato', sans-serif;
+
+h1, h2, h3, h4 {
+  color: white;
+}
+
+h1 {
+  font-size: 8em;
+  font-family: $header-font;
+}
+
+h2 {
+  font-size: 1.2em;
+  font-family: $secondary-font;
+}
+
+h3 {
+  font-size: 1.7em;
+  font-family: $header-font;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: $brand-color;
+  }
+}
