@@ -128,6 +128,7 @@ a {
     position: absolute;
     top: 35px;
     left: 0;
+    height: 235px;
     width: 200px;
     background-color: #333333; }
     #intro nav .dropdown li {
@@ -138,17 +139,6 @@ a {
       padding: 15px 10px;
       font-size: 1.1em;
       border-bottom: 1px solid #494947; }
-  #intro nav .destinations .dropdown, #intro nav .activities .dropdown, #intro nav .planning .dropdown, #intro nav .about .dropdown {
-    display: none; }
-  #intro nav .destinations:hover, #intro nav .activities:hover, #intro nav .planning:hover, #intro nav .about:hover {
-    border-radius: 5px 5px 0 0;
-    background-color: #333333; }
-    #intro nav .destinations:hover .dropdown, #intro nav .activities:hover .dropdown, #intro nav .planning:hover .dropdown, #intro nav .about:hover .dropdown {
-      overflow-y: hidden;
-      animation: falldown 250ms backwards;
-      display: block; }
-      #intro nav .destinations:hover .dropdown li:hover, #intro nav .activities:hover .dropdown li:hover, #intro nav .planning:hover .dropdown li:hover, #intro nav .about:hover .dropdown li:hover {
-        background-color: #e28238; }
   #intro nav #menu-icon {
     font-size: 2em; }
     @media screen and (min-width: 1020px) {
@@ -235,9 +225,12 @@ a {
   justify-content: space-between;
   align-items: center; }
   #second-nav ul li {
+    position: relative;
     display: inline;
     font-size: 1.05em;
     margin-left: 20px; }
+    #second-nav ul li:hover {
+      cursor: pointer; }
     #second-nav ul li:nth-child(5) a {
       border-left: 1px solid white;
       padding-left: 20px;
@@ -247,6 +240,28 @@ a {
   @media screen and (max-width: 900px) {
     #second-nav {
       display: none; } }
+  #second-nav .dropdown {
+    z-index: 5;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    height: 247px;
+    width: 200px;
+    background-color: #333333; }
+    #second-nav .dropdown li {
+      margin-left: 0;
+      display: block;
+      font-family: "Lato", sans-serif;
+      text-transform: none;
+      letter-spacing: 0;
+      padding: 15px 10px;
+      font-size: 1.1em;
+      border-bottom: 1px solid #494947; }
+
+.more {
+  position: relative; }
+  .more .dropdown ul li {
+    color: white; }
 
 .fixed {
   position: fixed;
@@ -256,6 +271,18 @@ a {
 .search {
   color: white;
   font-size: 1.2em; }
+
+.destinations .dropdown, .activities .dropdown, .planning .dropdown, .about .dropdown, .more .dropdown {
+  display: none; }
+.destinations:hover, .activities:hover, .planning:hover, .about:hover, .more:hover {
+  border-radius: 5px 5px 0 0;
+  background-color: #333333; }
+  .destinations:hover .dropdown, .activities:hover .dropdown, .planning:hover .dropdown, .about:hover .dropdown, .more:hover .dropdown {
+    overflow-y: hidden;
+    animation: falldown 250ms backwards;
+    display: block; }
+    .destinations:hover .dropdown li:hover, .activities:hover .dropdown li:hover, .planning:hover .dropdown li:hover, .about:hover .dropdown li:hover, .more:hover .dropdown li:hover {
+      background-color: #e28238; }
 
 #gallery {
   display: flex;
@@ -337,8 +364,8 @@ a {
   height: 100vh;
   background: #FFF0E7;
   background-image: url("../img/about-background.png");
-  background-size: contain;
   background-position: top right;
+  background-size: contain;
   background-repeat: no-repeat; }
   @media screen and (max-width: 900px) {
     #about {
