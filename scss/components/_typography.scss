@@ -2,6 +2,10 @@ $header-font: 'Lusitana', serif;
 $secondary-font: 'Oswald', sans-serif;
 $normal-font: 'Lato', sans-serif;
 
+*, a, p, div {
+  font-family: $normal-font;
+}
+
 h1, h2, h3, h4 {
   color: white;
 }

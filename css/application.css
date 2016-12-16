@@ -21,7 +21,8 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+  box-sizing: border-box; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -45,6 +46,9 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+*, a, p, div {
+  font-family: "Lato", sans-serif; }
 
 h1, h2, h3, h4 {
   color: white; }
@@ -73,6 +77,9 @@ a {
   background: url("../img/intro.jpg");
   color: white;
   position: relative; }
+  @media screen and (max-width: 900px) {
+    #intro {
+      height: 75vh; } }
 
 #intro nav {
   margin-left: auto;
@@ -82,18 +89,34 @@ a {
   display: flex;
   align-items: center;
   width: 75%; }
+  @media screen and (max-width: 1200px) {
+    #intro nav {
+      padding-top: 25px;
+      width: 85%; } }
   #intro nav h3 {
     letter-spacing: 2px; }
   #intro nav ul {
     font-family: "Oswald", sans-serif;
     text-transform: uppercase; }
+    @media screen and (max-width: 1020px) {
+      #intro nav ul {
+        display: none; } }
     #intro nav ul li {
       display: inline;
       margin-left: 20px;
       font-size: 0.95em;
       letter-spacing: 2px; }
+      @media screen and (max-width: 1200px) {
+        #intro nav ul li {
+          font-size: 0.8em;
+          margin-left: 10px; } }
       #intro nav ul li:hover {
         cursor: pointer; }
+  #intro nav #menu-icon {
+    font-size: 2em; }
+    @media screen and (min-width: 1020px) {
+      #intro nav #menu-icon {
+        display: none; } }
 
 .intro-content {
   position: absolute;
@@ -104,18 +127,26 @@ a {
     height: 50px;
     opacity: 0.6; }
   .intro-content h2 {
-    margin-top: 20px;
+    margin-top: 40px;
     letter-spacing: 5px;
     text-transform: uppercase; }
   .intro-content h1 {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 40px; }
+    @media screen and (max-width: 900px) {
+      .intro-content h1 {
+        font-size: 5em;
+        margin-bottom: 20px; } }
+    @media screen and (max-width: 450px) {
+      .intro-content h1 {
+        font-size: 4em; } }
   .intro-content hr {
     width: 18%;
     height: 4px;
     background-color: white;
     border: 0; }
   .intro-content i {
+    box-sizing: content-box;
     background: rgba(255, 255, 255, 0.3);
     border-radius: 50%;
     height: 50px;
@@ -140,6 +171,8 @@ a {
   transform: translateX(-50%);
   background-color: #DC7725;
   color: white; }
+  .button:hover {
+    color: white; }
   .button:after {
     content: "";
     position: absolute;
@@ -149,13 +182,105 @@ a {
     background-color: #DC7725;
     height: 20px;
     width: 20px; }
+  @media screen and (max-width: 900px) {
+    .button {
+      display: none; } }
 
 #second-nav {
   border-top: 1px inset black;
   border-bottom: 1px inset black;
-  padding: 0 25%;
+  box-sizing: border-box;
+  padding: 0 11%;
   height: 80px;
   width: 100vw;
-  background-color: #333333; }
+  background-color: #333333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  #second-nav ul li {
+    display: inline;
+    font-size: 1.05em;
+    margin-left: 20px; }
+    #second-nav ul li:nth-child(5) a {
+      border-left: 1px solid white;
+      padding-left: 20px;
+      color: #DC7725; }
+      #second-nav ul li:nth-child(5) a i {
+        color: white; }
+  @media screen and (max-width: 900px) {
+    #second-nav {
+      display: none; } }
+
+.search {
+  color: white;
+  font-size: 1.2em; }
+
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #D1D1C9; }
+
+.activity {
+  position: relative;
+  width: 25%;
+  height: 420px; }
+  .activity:first-child, .activity:last-child {
+    width: 50%; }
+    @media screen and (max-width: 960px) {
+      .activity:first-child, .activity:last-child {
+        width: 100%; } }
+  .activity img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: content-box;
+    height: 40px;
+    width: 40px;
+    opacity: 0.9;
+    transition: all 200ms ease-in-out; }
+  .activity:hover {
+    cursor: pointer; }
+    .activity:hover img {
+      height: 60px;
+      width: 60px; }
+  @media screen and (max-width: 960px) {
+    .activity {
+      width: 50%; } }
+  @media screen and (max-width: 770px) {
+    .activity {
+      width: 100%;
+      margin: 35px 30px 0 30px;
+      height: 250px; } }
+
+.canoe {
+  background: url("../img/canoe.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.backpacking {
+  background: url("../img/backpacking.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.hiking {
+  background: url("../img/hiking.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.camping {
+  background: url("../img/camping.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.kayak {
+  background: url("../img/kayak.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.biking {
+  background: url("../img/biking.jpg");
+  background-position: center;
+  background-size: cover; }
 
 /*# sourceMappingURL=application.css.map */
