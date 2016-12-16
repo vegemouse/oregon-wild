@@ -1,5 +1,6 @@
 $(function() {
-  var num = ($('#second-nav').offset().top + 10);
+
+  var num = ($('#second-nav').offset().top);
 
   $(window).bind('scroll', function () {
     if ($(window).scrollTop() > num) {
