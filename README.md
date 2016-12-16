@@ -13,8 +13,7 @@ Create a site replica of Arctic Wild, a wilderness guiding company based in Alas
 
 ## Technologies Uses
 
-Sass
-jQuery
+reset.css, Sass, jQuery
 
 ## Setup Instructions
 
