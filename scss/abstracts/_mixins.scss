@@ -9,3 +9,21 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin dropdown {
+  .dropdown {
+    display: none;
+  }
+  &:hover {
+    border-radius: 5px 5px 0 0;
+    background-color: $grey;
+    .dropdown {
+      overflow-y: hidden;
+      animation: falldown 250ms backwards;
+      display: block;
+      li:hover {
+        background-color: $brand-color;
+      }
+    }
+  }
+}

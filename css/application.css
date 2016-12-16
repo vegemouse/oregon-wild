@@ -1,8 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Lusitana:400,700|Oswald");
+@keyframes falldown {
+  0% {
+    height: 0; }
+  100% {
+    height: 235px; } }
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Lusitana:400,700|Oswald");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -65,11 +70,14 @@ h3 {
   font-size: 1.7em;
   font-family: "Lusitana", serif; }
 
+h4 {
+  font-size: 1.3em; }
+
 a {
   color: white;
   text-decoration: none; }
   a:hover {
-    color: #DC7725; }
+    color: #e28238; }
 
 #intro {
   width: 100vw;
@@ -102,8 +110,9 @@ a {
       #intro nav ul {
         display: none; } }
     #intro nav ul li {
+      position: relative;
       display: inline;
-      margin-left: 20px;
+      padding: 8px;
       font-size: 0.95em;
       letter-spacing: 2px; }
       @media screen and (max-width: 1200px) {
@@ -112,6 +121,32 @@ a {
           margin-left: 10px; } }
       #intro nav ul li:hover {
         cursor: pointer; }
+  #intro nav .dropdown {
+    z-index: 5;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 200px;
+    background-color: #333333; }
+    #intro nav .dropdown li {
+      display: block;
+      font-family: "Lato", sans-serif;
+      text-transform: none;
+      letter-spacing: 0;
+      padding: 15px 10px;
+      font-size: 1.1em;
+      border-bottom: 1px solid #494947; }
+  #intro nav .destinations .dropdown, #intro nav .activities .dropdown, #intro nav .planning .dropdown, #intro nav .about .dropdown {
+    display: none; }
+  #intro nav .destinations:hover, #intro nav .activities:hover, #intro nav .planning:hover, #intro nav .about:hover {
+    border-radius: 5px 5px 0 0;
+    background-color: #333333; }
+    #intro nav .destinations:hover .dropdown, #intro nav .activities:hover .dropdown, #intro nav .planning:hover .dropdown, #intro nav .about:hover .dropdown {
+      overflow-y: hidden;
+      animation: falldown 250ms backwards;
+      display: block; }
+      #intro nav .destinations:hover .dropdown li:hover, #intro nav .activities:hover .dropdown li:hover, #intro nav .planning:hover .dropdown li:hover, #intro nav .about:hover .dropdown li:hover {
+        background-color: #e28238; }
   #intro nav #menu-icon {
     font-size: 2em; }
     @media screen and (min-width: 1020px) {
@@ -152,7 +187,7 @@ a {
     height: 50px;
     width: 50px;
     padding: 30px 20px 20px 30px;
-    color: #DC7725;
+    color: #e28238;
     font-size: 2.5em;
     margin-top: 20px;
     transition: all 250ms; }
@@ -169,7 +204,7 @@ a {
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #DC7725;
+  background-color: #e28238;
   color: white; }
   .button:hover {
     color: white; }
@@ -179,7 +214,7 @@ a {
     bottom: -3px;
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
-    background-color: #DC7725;
+    background-color: #e28238;
     height: 20px;
     width: 20px; }
   @media screen and (max-width: 900px) {
@@ -204,7 +239,7 @@ a {
     #second-nav ul li:nth-child(5) a {
       border-left: 1px solid white;
       padding-left: 20px;
-      color: #DC7725; }
+      color: #e28238; }
       #second-nav ul li:nth-child(5) a i {
         color: white; }
   @media screen and (max-width: 900px) {
@@ -244,6 +279,13 @@ a {
     .activity:hover img {
       height: 60px;
       width: 60px; }
+  .activity h4 {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+    text-shadow: 3px 3px 3px black; }
   @media screen and (max-width: 960px) {
     .activity {
       width: 50%; } }

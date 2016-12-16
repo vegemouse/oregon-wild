@@ -30,8 +30,9 @@
       display: none;
     }
     li {
+      position: relative;
       display: inline;
-      margin-left: 20px;
+      padding: 8px;
       font-size: 0.95em;
       letter-spacing: 2px;
       @media screen and (max-width: 1200px) {
@@ -43,6 +44,30 @@
       }
     }
   }
+
+  .dropdown {
+    z-index: 5;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 200px;
+    background-color: $grey;
+    li {
+      display: block;
+      font-family: $normal-font;
+      text-transform: none;
+      letter-spacing: 0;
+      padding: 15px 10px;
+      font-size: 1.1em;
+      border-bottom: 1px solid $light-grey;
+    }
+  }
+
+  .destinations, .activities, .planning, .about {
+    @include dropdown;
+  }
+
+
   #menu-icon {
     font-size: 2em;
     @media screen and (min-width: 1020px) {

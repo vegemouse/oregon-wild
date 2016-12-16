@@ -29,6 +29,14 @@
       width: 60px;
     }
   }
+  h4 {
+    font-family: $secondary-font;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+    text-shadow: 3px 3px 3px black;
+  }
   @media screen and (max-width: 960px) {
     width: 50%;
   }
